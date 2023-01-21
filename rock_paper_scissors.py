@@ -1,4 +1,4 @@
-def game_code(choices):
+def game_code(choices, win_or_lose):
   import random
   while True:
     
@@ -17,29 +17,29 @@ def game_code(choices):
       if computer == "paper":
         print(f"computer: {computer}")
         print(f"player: {player}")
-        print("you lose!")
+        print(win_or_lose[1])
       if computer == "scissors":
         print(f"computer: {computer}")
         print(f"player: {player}")
-        print("you win!")
+        print(win_or_lose[0])
     elif player == "paper":
       if computer == "scissors":
         print(f"computer: {computer}")
         print(f"player: {player}")
-        print("you lose!")
+        print(win_or_lose[1])
       if computer == "rock":
         print(f"computer: {computer}")
         print(f"player: {player}")
-        print("you win!")
+        print(win_or_lose[0])
     elif player == "scissors":
       if computer == "rock":
         print(f"computer: {computer}")
         print(f"player: {player}")
-        print("you lose!")
+        print(win_or_lose[1])
       if computer == "paper":
         print(f"computer: {computer}")
         print(f"player: {player}")
-        print("you win!")
+        print(win_or_lose[0])
     play_again = input("play again? (yes/no): ").lower()
 
     if play_again != "yes":
